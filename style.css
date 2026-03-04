@@ -1,0 +1,149 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Press Start 2P', monospace;
+}
+
+/* ── Phone Body ─────────────────────────────────────────── */
+
+.phone-body {
+  background: linear-gradient(160deg, #3a3a3a, #222);
+  border-radius: 18px 18px 48px 48px;
+  padding: 16px 20px 28px;
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 0.08),
+    0 12px 40px rgba(0, 0, 0, 0.85);
+  width: 240px;
+}
+
+.phone-brand {
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* ── Screen ─────────────────────────────────────────────── */
+
+.screen-bezel {
+  background: #0d0d0d;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 18px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.screen {
+  background: #8fa878;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 6px 3px;
+  font-size: 6px;
+  color: #3a4a2a;
+  background: #8fa878;
+  border-bottom: 1px solid #7a9268;
+}
+
+.canvas-wrapper {
+  position: relative;
+}
+
+canvas {
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* ── Overlay ─────────────────────────────────────────────── */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  background: rgba(143, 168, 120, 0.93);
+}
+
+.overlay-title {
+  font-size: 16px;
+  color: #1a2a10;
+  letter-spacing: 2px;
+}
+
+.overlay-sub {
+  font-size: 5px;
+  color: #3a4a2a;
+  animation: blink 1.2s step-end infinite;
+}
+
+.overlay-score {
+  font-size: 6px;
+  color: #1a2a10;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── D-Pad Controls ──────────────────────────────────────── */
+
+.phone-controls {
+  display: flex;
+  justify-content: center;
+}
+
+.dpad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.dpad-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.dpad-btn {
+  background: #1e1e1e;
+  border: none;
+  border-radius: 4px;
+  color: #555;
+  cursor: pointer;
+  font-size: 9px;
+  height: 26px;
+  width: 28px;
+  transition: background 0.1s, color 0.1s;
+}
+
+.dpad-btn:active {
+  background: #333;
+  color: #888;
+}
+
+.dpad-center {
+  background: #1e1e1e;
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+}

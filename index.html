@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="phone-body">
+    <div class="phone-brand">NOKIA</div>
+
+    <div class="screen-bezel">
+      <div class="screen">
+        <div class="hud">
+          <span class="hud-label">SCORE</span>
+          <span id="score">0</span>
+        </div>
+
+        <div class="canvas-wrapper">
+          <canvas id="gameCanvas" width="180" height="180"></canvas>
+          <div class="overlay" id="overlay">
+            <div class="overlay-title" id="overlay-title">SNAKE</div>
+            <div class="overlay-sub" id="overlay-sub">Press ENTER to Start</div>
+            <div class="overlay-score" id="overlay-score"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phone-controls">
+      <div class="dpad">
+        <button class="dpad-btn dpad-up" data-dir="up">▲</button>
+        <div class="dpad-row">
+          <button class="dpad-btn dpad-left" data-dir="left">◀</button>
+          <div class="dpad-center"></div>
+          <button class="dpad-btn dpad-right" data-dir="right">▶</button>
+        </div>
+        <button class="dpad-btn dpad-down" data-dir="down">▼</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
